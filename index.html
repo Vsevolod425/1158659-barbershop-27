@@ -66,7 +66,7 @@
 		<section>
 			<h2>Фотогалерея</h2>
 			<figure>
-				<img src="img/barbershop_index/image.jpg" alt="Интерьер" width="286" height="164" alt="Интерьер">
+				<img src="img/image.jpg" alt="Интерьер" width="286" height="164" alt="Интерьер">
 			</figure>
 			<button type="button">Вперед</button>
 			<button type="button">Назад</button>
@@ -89,8 +89,27 @@
 		</section>
 
 		<section>
+			<h2>Записаться</h2>
 			<p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-			<!-- Здесь будет форма -->
+			<form action="https://echo.htmlacademy.ru" method="post">
+				<p>
+					<label for="appointment-date">Дата</label>
+					<input id="appointment-date" type="text" name="date" value="" placeholder="08.10.2017">
+				</p>
+				<p>
+					<label for="appointment-time">Время</label>
+					<input id="appointment-time" type="text" name="time" value="" placeholder="10:00">
+				</p>
+				<p>
+					<label for="appointment-name">Ваше Имя	</label>
+					<input id="appointment-name" type="text" name="name" value="" placeholder="Борода">
+				</p>
+				<p>
+					<label for="appointment-phone">Телефон</label>
+					<input id="appointment-phone" tipe="tel" name="phone" value="" placeholder="+7 123 456-78-90">
+				</p>
+			</form>
+			<button type="submit">Отправить</button>
 		</section>
 
 		<footer>
@@ -117,7 +136,24 @@
 		<section>
 			<h2>Личный кабинет</h2>
 			<p>Введите пожалуйста свой логин и пароль</p>
-			<!-- Здесь будет форма -->
+			<form action="https://echo.htmlacademy.ru" method="post">
+				<p>
+					<label for="user-login">Логин</label>
+					<input id="user-login" type="text" name="name">
+				</p>
+				<p>
+					<label for="user-password">Пароль</label>
+					<input id="user-password" type="password" name="password">
+				</p>
+				<p>
+					<label for="login-password-info">
+						<input id="login-password-info" type="checkbox" name="remember">
+						Запомните меня
+					</label>
+					<a href="#">Я забыл пароль</a>
+				</p>
+				<button type="submit">Войти</button>
+			</form>
 			<button type="button">Закрыть</button>
 		</section>
 
