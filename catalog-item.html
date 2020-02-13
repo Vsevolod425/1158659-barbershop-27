@@ -2,23 +2,30 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 	<title></title>
 </head>
-<body>
+<body class="inner_page">
 	<header>
-		<nav>
-			<a href="">
-				<img src="https://via.placeholder.com/111x24" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
+		<nav class="main_navigation">
+			<a class="main_header_logo" href="#">
+				<img src="img/logo.svg" width="111" height="24" alt="Барбершоп «Бородинский»">
 			</a>
-			<ul>
+			<ul class="site_navigation">
 				<li><a href="info.html">Информация</a></li>
 				<li><a href="news.html">Новости</a></li>
 				<li><a href="price.html">Прайс-лист</a></li>
-				<li><a href="catalog.html">Магазин</a></li>
+				<li><a href="catalogs.html">Магазин</a></li>
 				<li><a href="contacts.html">Контакты</a></li>
 			</ul>
-			<ul>
-				<li><button tipe="button">Войти</button></li>
+			<ul class="user_navigation">
+				<li>
+					<a href="#">Войти
+						<img src="img/login.svg" alt="login">
+					</a>
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -60,26 +67,51 @@
 			</ul>
 		</section>
 
-		<footer>
+		<footer class="main_footer">
+			<p class="footer_contacts">
+				Барбершоп «Бородинский»<br>
+				Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+				<a href="map.html">Как нас найти?</a><br>
+				Телефон: +7 (812) 666-02-66
+			</p>
+			<div class="footer_social">
+				<p>Давайте дружить!</p>
+				<ul>
+					<li><a class="social_button" href="#">Вконтакте</a></li>
+					<li><a class="social_button" href="#">Фейсбук</a></li>
+					<li><a class="social_button" href="#">Твитер</a></li>
+				</ul>
+			</div>
+			<p class="footer_copyright">
+				Разработано:
+				<a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+			</p>
+		</footer>
+
+		<section class="modal modal_login">
+			<h2>Личный кабинет</h2>
+			<p>Введите пожалуйста свой логин и пароль</p>
+			<form class="login_form" action="https://echo.htmlacademy.ru" method="post">
 				<p>
-					Барбершоп «Бородинский»<br>
-					Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
-					<a href="map.html">Как нас найти?</a><br>
-					Телефон: +7 (812) 666-02-66
+					<label class="visually_hidden" for="user-login">Логин</label>
+					<input class="login_icon_user" id="user-login" type="text" name="name" placeholder="email@example.com">
 				</p>
-				<div>
-					<p>Давайте дружить!</p>
-					<ul>
-						<li><a href="#">Вконтакте</a></li>
-						<li><a href="#">Фейсбук</a></li>
-						<li><a href="#">Твитер</a></li>
-					</ul>
-				</div>
 				<p>
-					Разработано:
-					<a href="https://htmlacademy.ru">HTML Academy</a>
+					<label class="visually_hidden" for="user-password">Пароль</label>
+					<input class="login_icon-user" id="user-password" type="password" name="password">
 				</p>
-			</footer>
+				<p class="login_password_info">
+					<label class="login-checkbox" for="login-password-info">
+						<input class="visually_hidden" id="login-password-info" type="checkbox" name="remember">
+						<span class="checkbox_indicator"></span>
+						Запомните меня
+					</label>
+					<a class="restore" href="#">Я забыл пароль</a>
+				</p>
+				<button class="button" type="submit">Войти</button>
+			</form>
+			<button class="modal_close" type="button">Закрыть</button>
+		</section>
 	</main>
 </body>
 </html>
